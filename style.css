@@ -31,6 +31,7 @@ body{
   font-size:x-large;
   margin-left: 80px;
   margin-bottom: 20px;
+  top: 30px;
   
  
 }
@@ -40,7 +41,46 @@ body{
   font-weight: bold;
   font-size:30px;
   margin-left: 300px;
-  margin-top: 50px;
+  top: 50px;
   
  
+}
+.submit{
+  width:230px;
+  height:80px;
+  border: 3px solid #ef1863;
+  color:rgb(7, 12, 0);
+  background-color: #ef1863;
+  font-family:"Major Mono Display",monospace;
+  font-size:30px;
+  filter:drop-shadow(5px 5px 0px #37010c);
+  cursor: pointer;
+  position: absolute; /* Абсолютное позиционирование */
+    top: 130px; /* Положение от нижнего края */
+    right: 15px; /* Положение от правого края */
+    
+}
+.submit1{
+  width:230px;
+  height:80px;
+  border: 3px solid #ef1863;
+  color:rgb(7, 12, 0);
+  background-color: #ef1863;
+  font-family:"Major Mono Display",monospace;
+  font-size:30px;
+  filter:drop-shadow(5px 5px 0px #37010c);
+  cursor: pointer;
+  position: absolute; /* Абсолютное позиционирование */
+    top: 260px; /* Положение от нижнего края */
+    right: 15px; /* Положение от правого края */
+    
+}
+.submit:active{
+  
+  position: relative; 
+    top: 122px; /* Положение от нижнего края */
+    right: 7px; /* Положение от правого края */
+  filter:drop-shadow(0px 0px 0px #37010c);
+  background-color: #ef1863;
+
 }
