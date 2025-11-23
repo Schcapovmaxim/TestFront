@@ -1,0 +1,46 @@
+header{
+
+}
+body{
+    background-image: url("for_Poligon.jpg");
+}
+.accent-text {
+  color: #ef1863;
+  
+  font-weight: bold;
+  font-size:x-large;
+  margin-left: 80px;
+  margin-top: 10px;
+  
+  
+}
+.accent-text1 {
+  color: #ef1863;
+  
+  font-weight: bold;
+  font-size:x-large;
+  margin-left: 80px;
+  margin-top: 50px;
+  
+ 
+}
+.accent-text2 {
+  color: #ef1863;
+  
+  font-weight: bold;
+  font-size:x-large;
+  margin-left: 80px;
+  margin-bottom: 20px;
+  
+ 
+}
+.accent-text3 {
+  color: #ef1863;
+  
+  font-weight: bold;
+  font-size:30px;
+  margin-left: 300px;
+  margin-top: 50px;
+  
+ 
+}
