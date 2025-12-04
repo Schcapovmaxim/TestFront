@@ -65,7 +65,12 @@ body.light-theme .test-output { background: #f9f9f9; color: #111; }
 body.dark-theme .test-item input[type="checkbox"] { background: transparent; }
 body.light-theme .test-item input[type="checkbox"] { background: #fff; }
 .test-item input[type="checkbox"]:checked { background: #ef1863; box-shadow: 0 0 10px rgba(239,24,99,.8); }
-.test-item input[type="checkbox"]:checked::after { content: "✓"; position: absolute; font-weight: bold; font-size: 14px; left: 3px; top: -1px; }
+.test-item input[type="checkbox"]:checked::after { content: "✓"; position: absolute; font-weight: bold; font-size: 14px; left: 3px; top: -1px; } body.dark-theme .test-item input[type="checkbox"]:checked::after {
+    color: #fff; 
+}
+
+body.light-theme .test-item input[type="checkbox"]:checked::after {
+    color: #000; } 
 
 
 .glow-on-hover {
