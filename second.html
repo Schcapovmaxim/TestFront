@@ -1,33 +1,105 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset = "UTF-8">
-        <title>Полигон</title>
-        
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Полигон</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
 
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    
-    <body>
-        <header align = "center">
-            
-        <h1>Полигон</h1>
-    </header>
-    <div>
-    <button class="glow-on-hover">T001</button><br>
-    <button class="glow-on-hover">T002</button><br>
-    <button class="glow-on-hover">T003</button><br>
-    <button class="glow-on-hover">T004</button><br>
-    <button class="glow-on-hover">T005</button>
-    </div> 
-    <button class="submit" >Сохранть настройки</button>
-    <button class="submit">вставить настройки</button>
-    <div class="res" >
-    <progress></progress> <br>
-        <progress></progress><br>
-            <progress></progress><br>
-                 <progress></progress><br>
-                    <progress></progress>
-         </div>
-    </body>
+<header>
+    <h1>Полигон</h1>
+    <button id="theme-toggle" class="control-btn small-btn">Switch Theme</button>
+</header>
+
+<main>
+    <div class="main-panel">
+       
+        <div class="test-output">
+            <h3>Трансляция тестирования</h3>
+            <div class="output-log" id="output-log">
+                <p>Здесь будет отображаться процесс...</p>
+            </div>
+        </div>
+
+      
+        <div class="test-panel">
+            <div class="test-list">
+                <label class="test-item">
+                    <input type="checkbox">
+                    <button class="glow-on-hover" onclick="openModal('T001')">T001</button>
+                </label>
+                <label class="test-item">
+                    <input type="checkbox">
+                    <button class="glow-on-hover" onclick="openModal('T002')">T002</button>
+                </label>
+                <label class="test-item">
+                    <input type="checkbox">
+                    <button class="glow-on-hover" onclick="openModal('T003')">T003</button>
+                </label>
+                <label class="test-item">
+                    <input type="checkbox">
+                    <button class="glow-on-hover" onclick="openModal('T004')">T004</button>
+                </label>
+                <label class="test-item">
+                    <input type="checkbox">
+                    <button class="glow-on-hover" onclick="openModal('T005')">T005</button>
+                </label>
+            </div>
+
+            <div class="control-buttons-center">
+                <button class="control-btn" id="start-btn">Start</button>
+                <button class="control-btn" id="stop-btn">Stop</button>
+                <button class="control-btn" id="save-btn">Сохранить результаты</button>
+            </div>
+        </div>
+    </div>
+
+  
+    <section class="progress-panel">
+        <div class="progress-item">
+            <span class="progress-title">T001</span>
+            <div class="progress connection"></div>
+            <span class="progress-label">Connection...</span>
+        </div>
+        <div class="progress-item">
+            <span class="progress-title">T002</span>
+            <div class="progress run"></div>
+            <span class="progress-label">37%</span>
+        </div>
+        <div class="progress-item">
+            <span class="progress-title">T003</span>
+            <div class="progress run"></div>
+            <span class="progress-label">78%</span>
+        </div>
+    </section>
+</main>
+
+
+<div class="overlay" id="overlay" onclick="closeModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+        <h2 id="modal-title">Настройки</h2>
+        <p>Настройки</p>
+        <button class="modal-close" onclick="closeModal()">Закрыть</button>
+    </div>
+</div>
+
+<script>
+function openModal(name){
+    document.getElementById("modal-title").textContent = name + " — Настройки";
+    document.getElementById("overlay").classList.add("show");
+}
+function closeModal(){
+    document.getElementById("overlay").classList.remove("show");
+}
+
+
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    document.body.classList.toggle('light-theme');
+});
+</script>
+
+</body>
 </html>
